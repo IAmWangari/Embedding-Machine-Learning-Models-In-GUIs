@@ -21,7 +21,8 @@ st.image("assets/team_logo.svg", width=200)
 
 # Load configuration from YAML file
 try:
-    with open('./config.yaml', 'r', encoding='utf-8') as file:
+    # with open('./config.yaml', 'r', encoding='utf-8') as file:
+    with open('config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
 except FileNotFoundError:
     st.error("Configuration file not found.")
